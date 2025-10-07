@@ -1,0 +1,13 @@
+[web_servers]
+192.168.64.5
+192.168.64.12 ansible_user=pat
+
+[workstations]
+192.168.64.5
+
+[db_servers]
+192.168.64.15
+
+[file_servers]
+192.168.64.13
+
