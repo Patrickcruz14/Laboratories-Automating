@@ -1,0 +1,21 @@
+---
+- name: Install and configure Apache with PHP
+  hosts: file_servers
+  become: true
+  tasks:
+    - name: install apache and php for CentOS servers
+      tags: apache,centos,httpd
+      dnf:
+        name:
+          - httpd
+          - php
+        state: latest
+      when: ansible_distribution == "CentOS"
+
+    - name: start and enable httpd (CentOS)
+      tags: apache,centos,httpd
+      service:
+        name: httpd
+        state: started
+        enabled: true
+      when: ansible_distribution == "CentOS"
