@@ -1,0 +1,10 @@
+[ubuntu]
+192.168.64.5 apache_package=apache2 php_package=libapache2-mod-php
+192.168.64.13 apache_package=apache2 php_package=libapache2-mod-php
+192.168.64.15 apache_package=apache2 php_package=libapache2-mod-php
+
+[centos]
+192.168.64.12 ansible_user=pat apache_package=httpd php_package=php
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3

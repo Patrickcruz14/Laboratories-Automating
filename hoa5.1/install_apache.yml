@@ -1,0 +1,11 @@
+---
+- name: Install Apache and PHP
+  hosts: all
+  become: true
+  tasks:
+    - name: Install apache and php
+      package:
+        name:
+          - "{{ apache_package }}"
+          - "{{ php_package }}"
+        state: latest
